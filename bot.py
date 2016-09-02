@@ -2,10 +2,10 @@ import tweepy
 import sys
 import time
 non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
-consumer_key = 'oPyIJbtdDPcYs89zc3Me3Ag9d'
-consumer_secret = 'Ubv3S9yfBF29YFgpHByggJ1x9SiWqO2Zk7ciyd3fAwNdrtGkd2'
-access_token = '769798187372642304-kDP8vVwySEKqrUEcrT113PJKc7C8YtW'
-access_token_secret = 'R0vA6qCnGA8tfM2vNbD8ibHYV6Ses6YDA0WRUXtsqquDm'
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_token_secret = ''
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
