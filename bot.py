@@ -19,12 +19,17 @@ while(count>0):
     Past_Followers = srk1.followers_count
     api.update_status(status='@iamsrk Follower count is '+str(Past_Followers))
     time.sleep(86400)
-    srk2 = api.get_user('@iamsrk')
-    Current_Followers = srk2.followers_count
-    api.update_status(status='Total Followers of @iamsrk = '+str(Current_Followers))
-    api.update_status(status='New Followers Today = '+str(Current_Followers - Past_Followers))
-    count=count+1
-    print(count)
+    while(True):
+        srk2 = api.get_user('@iamsrk')
+        Current_Followers = srk2.followers_count
+        api.update_status(status='Total Followers of @iamsrk = '+str(Current_Followers)+' ; New Followers Today = '+str(Current_Followers - Past_Followers))
+        time.sleep(86400)
+        srk3 = api.get_user('@iamsrk')
+        Current_Followers2 = srk3.followers_count
+        api.update_status(status='Total Followers of @iamsrk = '+str(Current_Followers2)+' ; New Followers Today = '+str(Current_Followers2 - Current_Followers))
+        #api.update_status(status='New Followers Today = '+str(Current_Followers - Past_Followers))
+        count=count+1
+        print(count)
 #Search_Results = api.search(q=("#Raees"))
 #print(Search_Results.translate(non_bmp_map))
 #api.update_status(status='@iamsrk Have a Nice Day')
